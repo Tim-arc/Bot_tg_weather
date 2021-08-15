@@ -1,7 +1,7 @@
 from bot__command import Add
 from bot__command import Start
 from bot__command import Weather
-from bot__command import Weather1
+from bot__command import WeatherPro
 from bot__command import Command
 from telebot import TeleBot
 
@@ -13,7 +13,7 @@ class TelegramBot(TeleBot):
         self.register_command(Start.Start())
         self.register_command(Add.Add())
         self.register_command(Weather.Weather())
-        self.register_command(Weather1.Weather1())
+        self.register_command(WeatherPro.WeatherPro())
 
     def register_command(self, command: Command):
         self.commands[command.get_name()] = command
